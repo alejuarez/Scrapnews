@@ -1,0 +1,36 @@
+<div class='container-fluid article-container'>
+    {{#each article}}
+    <div class='card-header'>
+        <h3>{{title}}</h3>
+        <a {{link}}></a>
+    </div>
+    {{/each}}
+</div>
+
+{{!-- Modal for alerting number of scraped articles --}}
+<div id="alertModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body text-center">
+                <h2>You have scraped <span id="numArticles"></span> new articles</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{!-- error modal --}}
+<div id="error" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h2>There was an error processing your request. Please try again later.</h2>
+            </div>
+        </div>
+    </div>
+</div>

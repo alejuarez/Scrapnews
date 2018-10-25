@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Newspaper ~ Your Personal News</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href='/css/style.css'>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class='navbar-brand' href='/_'> NYT Scrapes</a>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-danger scrape-new" href="/scrape">Scrape New Articles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-danger clear" href="/delete">Clear Articles</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class='jumbotron text-center'>
+
+    </div>
+    {{{body}}}
+
+
+    <!-- Footer -->
+    <footer class="pageFooter">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">NYT - </h5>
+                    <p class="grey-text text-lighten-4">Created by Alejandra</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer-copyright">
+            <div class="container">
+                © 2018 All Rights Reservered.
+                <a class="grey-text text-lighten-4 right" href="#!">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script type='text/javascript' src='./js/app.js'></script>
+</body>
+
+</html>
