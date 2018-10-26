@@ -33,6 +33,7 @@ mongoose.connect(
   'mongodb://localhost/scrapnews',
   { useNewUrlParser: true }
 );
+mongoose.set('useFindAndModify', false);
 
 // Routes
 // A GET route for scraping the New York Times website
@@ -100,20 +101,15 @@ app.get('/home', (req, res) => {
 });
 
 // Route for grabbing a specific Article by id, populate it with it's note
-app.get('/articles/:id', function(req, res) {
-  db.Article.find({ _id: req.params.id })
-    .then(response => res.json(response))
-    .catch(err => res.json(err));
-});
 
-// Route for saving/updating an Article's associated Note
-app.post('/saved', function(req, res) {
-  db.Article.create(req.body).then(function(dbArticle) {
-    return db.Article.findOneAndUpdate(
-      {},
-      { $push: { articles: dbArticle.id } }
-    );
-  });
+//get route to update 'saved' boolean to true
+app.post('/save', function(req, res) {
+  console.log(' im in save article');
+  // console.log('p-id:', req.params.id);
+  // console.log('b-id:', req.body.id);
+  db.Article.findOneAndUpdate({ _id: req.body.id }, { $set: { isSaved: true } })
+    .then(result => res.redirect('/'))
+    .catch(err => res.json(err));
 });
 
 // Route for creating a Note
@@ -133,7 +129,7 @@ app.post('/note/:id', (req, res) => {
 });
 
 // Route for deleting all articles
-app.put('/delete', (req, res) => {
+app.get('/delete', (req, res) => {
   console.log('delete ');
   db.Article.deleteMany({})
     .then(article => res.render('index', { article }))

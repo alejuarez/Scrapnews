@@ -10,3 +10,11 @@ This app scraps articles from the New York Times. It saves the articles in the d
 - Cheerio
 - Axios
 - HTML
+
+## Initial Screen
+
+[img]mong-initialscreen.jpg
+
+## Display Articles
+
+[img]mong-displayart.jpg
