@@ -13,8 +13,10 @@ This app scraps articles from the New York Times. It saves the articles in the d
 
 ## Initial Screen
 
-[img]mong-initialscreen.jpg
+<img src=public/img/mong-initialscreen.jpg>
 
 ## Display Articles
 
-[img]mong-displayart.jpg
+<img src=public/img/mong-displayart.jpg>
+
+###### Heroku app https://glacial-thicket-15172.herokuapp.com/
